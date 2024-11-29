@@ -1,3 +1,6 @@
+
+// Já lido
+
 export function hoverChangeExperience(
   nameCard,
   changeDescription,

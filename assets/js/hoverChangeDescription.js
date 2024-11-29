@@ -1,3 +1,6 @@
+
+// Já lido
+
 export function hoverChangeDescription(nameCard, text) {
   var changeDescription = document.querySelector(".changeDescription");
 

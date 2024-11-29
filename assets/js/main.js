@@ -8,47 +8,128 @@ menu();
 initScrollReveal();
 typeWrite(document.querySelector(".typewriter"));
 
-hoverChangeExperience(
-  ".digitalhouse",
-  `Trabalhei como instrutor conteudista em frontend na
-  Digital House, o trabalho consistia em criar conteúdos para as
-  aulas de especialização frontend. Alguns temas dos conteúdos
-  realizados foram: React, Redux, TypeScript, Testes,
-  GraphQL, Next.js, MUI, React Hook Form e styled-components.`,
-  "Professor conteudista em Frontend",
-  "Digital House",
-  "Nov 2021 - Nov 2022 (1 ano)"
-);
+//Criada função para receber uma data inicial e retornar um contador de Ano e Mes
+function atualizarContador(dataInicial) {
+  const agora = new Date();
+  const inicio = new Date(dataInicial);
 
-hoverChangeExperience(
-  ".zuplae",
-  `Trabalhei como Social Media e Designer na Zuplae que é um escola
-  de programação, onde teve como foco as criações de conteúdos sobre
-  programação para a comunidade dev através das redes sociais.`,
-  "Social Media e UI Designer",
-  "Zuplae",
-  "Jan 2022 - Abril 2022 (4 meses)"
-);
+  const diferenca = agora - inicio;
+  const anos = Math.floor(diferenca / (1000 * 60 * 60 * 24 * 365));
+  const meses = Math.floor((diferenca % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30));
 
-hoverChangeExperience(
-  ".codigofontetv",
-  `Trabalhei como Social Media e Designer no Código Fonte TV, 
-  onde teve como foco as criações de conteúdos sobre programação 
-  para a comunidade dev através das redes sociais.`,
-  "Social Media e Designer",
-  "Código Fonte TV",
-  "Jun 2021 - Jan 2022 (8 meses)"
-);
+  // Retorna o texto formatado
+  return `${anos > 0 ? `${anos} ano${anos === 1 ? '' : 's'}, ` : ''}${meses} mes${meses === 1 ? '' : 'es'}`;
+}
 
-hoverChangeExperience(
-  ".contweb",
-  `Realizei o estágio na ContWeb, uma empresa de contabilidade. 
-  Onde pela primeira vez tive experiência com o React. Além do
-  desenvolvimento frontend criei os designs da nova plataforma da empresa.`,
-  "Developer frontend e UI Designer",
-  "ContWeb",
-  "Set 2021 - Nov 2021 (3 meses)"
-);
+// Data inicial da experiência
+const dataInicialEasypro = '2023-07-21';
+const dataInicialBackdesk = '2024-01-01';
+const dataInicialGestTraf = '2020-02-01';
+const dataInicialSite = '2021-02-01';
+
+// Atualiza o valor do contador no elemento HTML e EASYPRO
+setInterval(() => {
+  const contadorTexto = atualizarContador(dataInicialEasypro);
+  const contadorElemento = document.getElementById('contador');
+  if (contadorElemento) {
+    contadorElemento.textContent = contadorTexto;
+  }
+}, 1000);
+
+// Atualiza o contador do Backdesk
+setInterval(() => {
+  const contadorBackdesk = atualizarContador(dataInicialBackdesk);
+  const contadorElementoBackdesk = document.getElementById('contadorBackdesk');
+  if (contadorElementoBackdesk) {
+    contadorElementoBackdesk.textContent = contadorBackdesk;
+  }
+}, 1000);
+
+// Atualiza o contador da GestTraf
+setInterval(() => {
+  const contadorGestTraf = atualizarContador(dataInicialGestTraf);
+  const contadorElementoGestTraf = document.getElementById('contadorGestTraf');
+  if (contadorElementoGestTraf) {
+    contadorElementoGestTraf.textContent = contadorGestTraf;
+  }
+}, 1000);
+
+// Atualiza o contador da Criação de Sites
+setInterval(() => {
+  const contadorSite = atualizarContador(dataInicialSite);
+  const contadorElementoSite = document.getElementById('contadorSite');
+  if (contadorElementoSite) {
+    contadorElementoSite.textContent = contadorSite;
+  }
+}, 1000);
+
+// Atualiza o hoverChangeExperience para Easypro Tech
+setInterval(() => {
+  const contadorEasy = atualizarContador(dataInicialEasypro);
+
+  hoverChangeExperience(
+    ".EASYPRO_TECH",  
+    `Minha primeira experiência com código foi na EASYPRO TECH, uma 
+            empresa que desenvolve sistemas para indústrias. Lá, tive contato 
+            com Back-end e Front-end, além de diversas oportunidades, como nossa participação 
+            na Hannover Messe, a maior feira industrial e tecnológica do mundo. Essa experiência 
+            me permitiu compreender melhor a grandiosidade do mercado global.`,
+    "Primeiro contato com Desenvolvimento",
+    "Empresa - EASYPRO TECH",
+    `Jun 2023 - Dias atuais: ${contadorEasy}`
+  );
+}, 1000);
+
+// Atualiza o hoverChangeExperience para Backdesk
+setInterval(() => {
+  const contadorBackdesk = atualizarContador(dataInicialBackdesk);
+
+  hoverChangeExperience(
+    ".BACKDESK",
+    `Como CMO, lidero estratégias de marketing e comunicação, focando 
+    no fortalecimento da marca, geração de leads qualificados e expansão de mercado.
+     Minha atuação inclui a gestão de campanhas, análise de resultados e alinhamento
+      das ações com os objetivos estratégicos da empresa.`,
+    "CMO - Chief Marketing Officer",
+    "Empresa - BACKDESK",
+    `Jan 2024 - Dias atuais: ${contadorBackdesk}`
+  );
+}, 1000);
+
+// Atualiza o hoverChangeExperience para Gestao de Trafego
+setInterval(() => {
+  const contadorGestTraf = atualizarContador(dataInicialGestTraf);
+
+  hoverChangeExperience(
+    ".gestao_trafego",
+    `Como gestor de tráfego, atuei em diversas empresas desenvolvendo e gerenciando campanhas de
+     anúncios pagos em plataformas como Google Ads, Meta Ads e Linkedin Ads. Minha experiência inclui 
+     a criação de estratégias para atrair tráfego qualificado, otimização de campanhas para maximizar 
+     ROI e análise de métricas para garantir resultados alinhados aos objetivos de cada negócio.`,
+    "Gestor de Tráfego",
+    "Planejar, executar e gerenciar campanhas.",
+    `Fev 2020 - Dias atuais: ${contadorGestTraf}`
+  );
+}, 1000);
+
+// Atualiza o hoverChangeExperience para Site
+setInterval(() => {
+  const contadorSite = atualizarContador(dataInicialSite);
+
+  hoverChangeExperience(
+    ".Wix",
+    `Trabalhei como Social Media e Web Designer em diversas empresas, com foco na 
+    criação de conteúdos relevantes e personalizados para diferentes nichos de mercado. 
+    Minha atuação incluiu estratégias voltadas para a criação e promoção de marcas, desenvolvendo 
+    materiais visuais impactantes e campanhas que fortaleceram a identidade e presença digital das 
+    empresas.`,
+    "Social Media & Web Designer",
+    "Criação e promoção de marca",
+    `Fev 2021 - Dias atuais: ${contadorSite}`
+  );
+}, 1000);
+
+
 
 hoverChangeDescription(
   ".html",
