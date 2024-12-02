@@ -144,38 +144,47 @@ hoverChangeDescription(
   "JavaScript é uma linguagem de programação que permite a você implementar elementos dinâmicos em páginas web."
 );
 hoverChangeDescription(
-  ".sass",
-  "Sass é um pré-processador CSS que adiciona alguns recursos que não estão disponíveis de forma nativa."
+  ".adobe",
+  "O pacote Adobe é um conjunto robusto de ferramentas criativas amplamente utilizado por profissionais. Foco em Photoshop, Illustrator e Premiere Pro."
 );
+
 hoverChangeDescription(
-  ".react",
-  "React é uma biblioteca JavaScript com foco em criar interfaces de usuário de forma componetizada."
+  ".vscode",
+  "VScode é um editor de código-fonte moderno e versátil, que suporta diversas linguagens de programação e oferece extensões para depuração, controle de versão e integração com outras ferramentas."
 );
+
 hoverChangeDescription(
-  ".next",
-  "Next.js é uma estrutura da web que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para web baseados em React."
+  ".meta",
+  "Plataforma de publicidade digital da Meta (Facebook e Instagram), projetada para a criação e gestão de campanhas, com recursos avançados de segmentação e análise de desempenho."
 );
+
 hoverChangeDescription(
-  ".styled",
-  "styled-components é uma biblioteca que utiliza o conceito de CSS-in-JS, ou seja, que nos permite escrever códigos CSS dentro do Javascript."
+  ".googleads",
+  "Serviço de publicidade do Google que permite a criação de campanhas para atingir públicos-alvo em pesquisas, YouTube e redes parceiras, utilizando estratégias baseadas em palavras-chave e segmentação de mercado."
 );
+
 hoverChangeDescription(
-  ".tailwind",
-  "Tailwind CSS é um framework CSS que nos fornece classes utilitárias com o propósito de estilizar as páginas."
+  ".GA4",
+  "A versão mais recente do Google Analytics, desenvolvida para oferecer insights detalhados sobre o comportamento do usuário em sites e aplicativos, com foco em privacidade e personalização de eventos."
 );
+
 hoverChangeDescription(
-  ".typescript",
-  "TypeScript é um superset do JavaScript que incluir recursos que não estão presentes na linguagem de forma nativa, além de torná-la estática."
+  ".wix",
+  "Wix e Wix Studio: Uma plataforma avançada de criação de sites, que oferece ferramentas de design responsivo, colaboração em tempo real e desenvolvimento full-stack, integrando recursos como e-commerce, SEO e soluções empresariais."
 );
+
 hoverChangeDescription(
-  ".radix",
-  "Radix é uma biblioteca que fornece componentes acessíveis e sem estilos para a criação de aplicação em React."
+  ".figma",
+  "Figma é uma ferramenta de design colaborativo baseada na nuvem, ideal para a criação de interfaces, protótipos e wireframes, com suporte para trabalho em equipe em tempo real."
 );
+
 hoverChangeDescription(
-  ".cypress",
-  "Cypress é um framework para automação de testes end-to-end, onde atualmente usa a linguagem JavaScript."
+  ".sonyvegas",
+  "Sony Vegas é um software de edição de vídeo amplamente utilizado por criadores de conteúdo, oferecendo ferramentas profissionais para edição, efeitos visuais e ajustes precisos."
 );
+
 hoverChangeDescription(
-  ".storybook",
-  "Storybook é uma ferramenta que tem como objetivo documentar e testar os componentes da aplicação."
+  ".cinema4d",
+  "Cinema 4D é uma aplicação avançada para modelagem, animação e renderização 3D, utilizada em projetos de design gráfico, produção cinematográfica e desenvolvimento de efeitos visuais."
 );
+
