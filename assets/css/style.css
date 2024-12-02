@@ -10,6 +10,10 @@
     color: #000000
 }
 
+section {
+    scroll-margin-top: 100px; /* Ajuste esse valor conforme a altura do seu cabeçalho */
+  }  
+
 ul,
 ol {
     list-style: none;
@@ -389,7 +393,7 @@ header .grid-layout nav .nav-list li a:hover {
     background-color: #fff;
     padding: 16px;
     border-radius: 16px;
-    width: 180px;
+    width: 138px;
     text-align: left;
     font-size: 1.4rem;
     font-weight: 500;
