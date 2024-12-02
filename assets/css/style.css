@@ -391,13 +391,13 @@ header .grid-layout nav .nav-list li a:hover {
 #s-about .grid-layout>div #creator-photo h3 {
     color: #111;
     background-color: #fff;
-    padding: 16px;
-    border-radius: 16px;
-    width: 138px;
-    text-align: left;
+    padding: 14px;
+    border-radius: 14px;
+    width: 190px;
+    text-align: center;
     font-size: 1.4rem;
     font-weight: 500;
-    margin: 16px
+    margin: 14px
 }
 
 #s-about .grid-layout>div div:nth-child(2) {
@@ -418,16 +418,26 @@ header .grid-layout nav .nav-list li a:hover {
 }
 
 @media screen and (max-width: 992px) {
-    #s-about .grid-layout>div div:nth-child(2) h2 {
-        font-size: 3.2rem
+    #s-about .grid-layout > div div:nth-child(2) h2 {
+        font-size: 3.2rem; /* Corrigido: Adicionado ponto-e-vírgula */
+        text-align: center; /* Centraliza o texto horizontalmente */
     }
 }
+
+
 
 #s-about .grid-layout>div div:nth-child(2) h3 {
     font-size: 1.8rem;
     font-weight: 300;
-    margin-bottom: 16px;
-    color: #fff
+    margin-bottom: 14px;
+    color: #ffffff
+}
+
+@media screen and (max-width: 992px) {
+    #s-about .grid-layout>div div:nth-child(2) h3 {
+        align-items: center;
+        text-align: center;
+    }
 }
 
 #s-about .grid-layout>div div:nth-child(2) h4 {
@@ -436,11 +446,17 @@ header .grid-layout nav .nav-list li a:hover {
     color: #986dff
 }
 
+@media screen and (max-width: 992px) {
+    #s-about .grid-layout>div div:nth-child(2) p{
+        text-align: center;
+    }
+}
+
 #s-about .grid-layout>div div:nth-child(2) p {
     font-size: 1.8rem;
     color: #9ca3af;
     line-height: 160%;
-    margin: 32px 0px 48px 0px
+    margin: 18px 0px 48px 0px
 }
 
 #s-about .grid-layout>div div:nth-child(2) nav ul {
@@ -459,12 +475,24 @@ header .grid-layout nav .nav-list li a:hover {
     background-color: #111;
     border: 2px solid #1f1f1f;
     border-radius: 6px;
-    padding: 16px
+    padding: 25px
 }
 
 @media screen and (max-width: 1200px) {
     #s-about .grid-layout>div div:nth-child(2) nav ul a img {
         width: 40px
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    #s-about .grid-layout>div div:nth-child(2) nav ul {
+        display: flex;
+        /* Habilita Flexbox */
+        justify-content: center;
+        /* Centraliza horizontalmente */
+        flex-wrap: wrap;
+        /* Permite que os links quebrem linha, se necessário */
     }
 }
 
@@ -886,7 +914,7 @@ span.contador{
 
 #s-skills .grid-layout #skills div,
 #s-skills .grid-layout #skills article {
-    width: 50%
+    width: 100%
 }
 
 @media screen and (max-width: 1200px) {
@@ -898,7 +926,7 @@ span.contador{
 }
 
 #s-skills .grid-layout #skills #skills-text {
-    min-height: 400px
+    min-height: 0px
 }
 
 @media screen and (max-width: 768px) {
@@ -908,7 +936,7 @@ span.contador{
 }
 
 #s-skills .grid-layout #skills #skills-text h2 {
-    margin-bottom: 32px;
+    margin-bottom: 12px;
     color: #fff;
     font-size: 3.2rem;
     font-weight: 500
@@ -924,12 +952,16 @@ span.contador{
 
 @media screen and (max-width: 768px) {
     #s-skills .grid-layout #skills #skills-text .changeDescription {
-        display: none
+        display: block; /* Garante que o texto seja exibido */
+        text-align: left; /* Opcional: centraliza o texto no mobile */
+        font-size: 16px; /* Ajuste o tamanho da fonte para mobile */
+        margin-top: 10px; /* Espaço entre os elementos */
     }
 }
 
 #s-skills .grid-layout #skills #skills-text p {
-    max-width: 500px;
+    max-width: 1000px;
+    margin-bottom: 15px;
     line-height: 3.2rem;
     color: #9ca3af;
     font-size: 1.8rem
@@ -940,6 +972,7 @@ span.contador{
     flex-wrap: wrap;
     gap: 24px
 }
+
 
 @media screen and (max-width: 1200px) {
     #s-skills .grid-layout #skills #skills-cards {
@@ -961,6 +994,14 @@ span.contador{
     border: 1px solid #1f1f1f;
     border-radius: 4px;
     transition: 1s all ease
+}
+
+@media screen and (max-width: 768px) {
+    #s-skills .grid-layout #skills #skills-cards article {
+        width: 50%; /* Ocupa toda a largura */
+        height: 50%; /* Ajusta a altura automaticamente */
+        padding: 16px; /* Adiciona espaço interno */
+    }
 }
 
 #s-skills .grid-layout #skills #skills-cards article:hover {

@@ -2,23 +2,36 @@
 // Já lido
 
 export function hoverChangeDescription(nameCard, text) {
-  var changeDescription = document.querySelector(".changeDescription");
-
-  // Seleciona todos os elementos correspondentes ao seletor
+  const changeDescription = document.querySelector(".changeDescription");
   const elements = document.querySelectorAll(nameCard);
 
-  // Verifica se existem elementos encontrados
+  // Função auxiliar para verificar se o dispositivo é touchscreen
+  const isTouchDevice = () => 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
   if (elements.length > 0) {
     elements.forEach((element) => {
-      element.addEventListener("mouseover", () => {
-        changeDescription.innerHTML = text;
-      });
+      if (isTouchDevice()) {
+        // Comportamento para dispositivos touchscreen (mobile)
+        element.addEventListener("click", () => {
+          if (changeDescription.innerHTML === text) {
+            changeDescription.innerHTML = "Para ler o card, clique acima";
+          } else {
+            changeDescription.innerHTML = text;
+          }
+        });
+      } else {
+        // Comportamento para desktops
+        element.addEventListener("mouseover", () => {
+          changeDescription.innerHTML = text;
+        });
 
-      element.addEventListener("mouseout", () => {
-        changeDescription.innerHTML = `Para ler o card, passe o cursor do mouse acima`;
-      });
+        element.addEventListener("mouseout", () => {
+          changeDescription.innerHTML = "Para ler o card, passe o cursor do mouse acima";
+        });
+      }
     });
   } else {
     console.warn(`Nenhum elemento encontrado para o seletor: ${nameCard}`);
   }
 }
+
