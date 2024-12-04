@@ -188,3 +188,27 @@ hoverChangeDescription(
   "Cinema 4D é uma aplicação avançada para modelagem, animação e renderização 3D, utilizada em projetos de design gráfico, produção cinematográfica e desenvolvimento de efeitos visuais."
 );
 
+// Importa a biblioteca do EmailJS
+const emailJS = document.createElement('script');
+emailJS.src = "https://cdn.emailjs.com/dist/email.min.js";
+document.head.appendChild(emailJS);
+
+emailJS.onload = () => {
+  // Inicializa o EmailJS após o script carregar
+  emailjs.init('mbl8oXkqLam40vGWZ'); // Substitua pelo seu User ID do EmailJS
+};
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Impede o envio padrão do formulário
+
+  const serviceID = 'service_08n1yze'; // Substitua pelo ID do seu serviço
+  const templateID = 'template_dmmntb9'; // Substitua pelo ID do seu template
+
+  emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      alert('Mensagem enviada com sucesso!');
+    }, (err) => {
+      alert('Erro ao enviar mensagem: ' + JSON.stringify(err));
+    });
+});
+

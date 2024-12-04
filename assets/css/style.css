@@ -310,8 +310,6 @@ header .grid-layout nav .nav-list li a:hover {
     font-weight: 400
 }
 
-
-
 #s-home .grid-layout #home #home-container-text a:hover {
     padding: 20px 45px;
     max-width: 325px
@@ -1014,10 +1012,121 @@ span.contador{
     }
 }
 
+/* Estilo geral da seção de contato */
+#s-contact {
+    padding: 96px 48px;
+    background-color: #151515;
+    color: #fff;
+  }
+  
+  @media screen and (max-width: 992px) {
+    #s-contact {
+      padding: 48px 24px;
+    }
+  }
+  
+  /* Layout em grade para organizar o conteúdo */
+  #s-contact .grid-layout {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    flex-wrap: wrap;
+    gap: 16px;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  /* Estilo da coluna esquerda */
+  #s-contact .left {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  
+  #s-contact .left h2 {
+        font-size: 4rem;
+        font-weight: 500;
+        margin: 16px 0px;
+        color: #fff
+    }
+
+  #s-contact .left p {
+    max-width: 1000px;
+    margin-bottom: 15px;
+    line-height: 3.2rem;
+    color: #9ca3af;
+    font-size: 1.8rem
+  }
+
+  #s-contact a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    color: #000000;
+    backdrop-filter: blur(10px);
+    padding: 20px 32px;
+    max-width: 300px;
+    border-radius: 4px;
+    transition: all .4s ease;
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 400
+}
+  
+#s-contact a:hover {
+    padding: 20px 45px;
+    max-width: 325px
+}
+
+  #s-contact .right {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  #s-contact .right form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  #s-contact .right form input,
+  #s-contact .right form textarea {
+    width: 100%;
+    padding: 18px;
+    font-size: 16px;
+    background-color: #161b22; /* Fundo dos campos */
+    color: #c9d1d9; /* Texto claro */
+    border-radius: 5px;
+  }
+  
+  #s-contact .right form input::placeholder,
+  #s-contact .right form textarea::placeholder {
+    color: #8b949e; /* Placeholder com tom claro */
+  }
+  
+  #s-contact .right form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #1f1f1f; /* Botão com verde escuro */
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  #s-contact .right form button:hover {
+    background-color: #393939; /* Cor mais clara ao passar o mouse */
+  }
+  
+
 footer {
     width: 100%;
     height: auto;
-    background-color: #151515;
+    background-color: #111;
     color: #fff;
     padding: 24px 0px
 }
@@ -1083,5 +1192,3 @@ footer div {
     max-width: 1140px;
     margin: 0 auto
 }
-
-/*# sourceMappingURL=style.css.map */
