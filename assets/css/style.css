@@ -643,11 +643,16 @@ span.contador{
 }
 
 #s-projects .grid-layout h2 {
-    padding-bottom: 24px;
+    padding-bottom: 10px;
     color: #fff;
     font-size: 4rem;
     font-weight: 500
 }
+
+#s-projects .grid-layout img {
+    width: 100%;
+    border-radius: 4px;
+  }
 
 #s-projects .grid-layout h2 span {
     color: #986dff
@@ -724,6 +729,7 @@ span.contador{
 
 #s-projects .grid-layout #projects>article h3 {
     color: #fff;
+    padding-top: 20px;
     font-size: 2.4rem;
     font-weight: 500
 }
@@ -1122,7 +1128,7 @@ span.contador{
     background-color: #393939; /* Cor mais clara ao passar o mouse */
   }
   
-#s-new-projects {
+/* #s-new-projects {
   padding: 72px 0px;
   background-color: #111;
 }
@@ -1132,6 +1138,14 @@ span.contador{
   flex-direction: column;
   align-items: center;
 }
+
+#s-new-project .grid-layout h2 {
+    font-size: 4rem;
+    font-weight: 500;
+    margin: 16px 0px;
+    color: #fff
+}
+
 
 #new-projects {
   display: flex;
@@ -1172,7 +1186,7 @@ span.contador{
   margin-top: 8px;
   color: #9ca3af;
   font-size: 1.6rem;
-}
+} */
 
 footer {
     width: 100%;
